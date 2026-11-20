@@ -1,0 +1,16 @@
+syntax = "proto3";
+package protocol.heroPage;
+import "heroProto.proto";
+
+// {classComment}
+message HeroPageProto {
+  // 总记录数
+  int64 total = 1;
+  // 頁面顯示數量
+  int64 size = 2;
+  // 當前分頁
+  int64 current = 3;
+  // 英雄分頁列表
+  repeated protocol.hero.HeroProto heroProtoList = 4;
+}
+

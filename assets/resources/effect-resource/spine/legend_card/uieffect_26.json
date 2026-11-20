@@ -1,0 +1,47 @@
+{
+"skeleton": { "hash": "QIXyp+bXYfRVqxLZZkOCjipqkEE", "spine": "3.8.75", "images": "C:\\Users\\jiangjiasheng\\Desktop\\二次元整套UI\\特效\\UI特效SPINE\\uieffect_26", "audio": "C:\\Users\\jiangjiasheng\\Desktop\\二次元整套UI\\特效\\UI特效SPINE\\uieffect_26" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root" }
+],
+"slots": [
+	{ "name": "images/light_sweep_0000", "bone": "bone", "color": "fff0cbff", "blend": "screen" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"images/light_sweep_0000": {
+				"images/light_sweep_0000": { "width": 116, "height": 116 },
+				"images/light_sweep_0002": { "width": 116, "height": 116 },
+				"images/light_sweep_0004": { "width": 116, "height": 116 },
+				"images/light_sweep_0006": { "width": 116, "height": 116 },
+				"images/light_sweep_0008": { "width": 116, "height": 116 },
+				"images/light_sweep_0009": { "width": 116, "height": 116 },
+				"images/light_sweep_0010": { "width": 116, "height": 116 },
+				"images/light_sweep_0011": { "width": 116, "height": 116 }
+			}
+		}
+	}
+],
+"animations": {
+	"animation": {
+		"slots": {
+			"images/light_sweep_0000": {
+				"attachment": [
+					{ "name": "images/light_sweep_0000" },
+					{ "time": 0.0667, "name": "images/light_sweep_0002" },
+					{ "time": 0.1333, "name": "images/light_sweep_0004" },
+					{ "time": 0.2333, "name": "images/light_sweep_0006" },
+					{ "time": 0.3, "name": "images/light_sweep_0008" },
+					{ "time": 0.3667, "name": "images/light_sweep_0009" },
+					{ "time": 0.4333, "name": "images/light_sweep_0010" },
+					{ "time": 0.5, "name": "images/light_sweep_0011" },
+					{ "time": 0.6, "name": null },
+					{ "time": 1.6667, "name": null }
+				]
+			}
+		}
+	}
+}
+}

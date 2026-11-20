@@ -1,0 +1,29 @@
+syntax = "proto3";
+package protocol.arms;
+
+// {classComment}
+message ArmsProto {
+  // ID
+  int64 id = 1;
+  int64 armsId = 2;
+  // 用户钱包地址
+  string userAddress = 3;
+  string name = 4;
+  string image = 5;
+  int32 attr = 6;
+  int32 armsType = 7;
+  int32 wear = 8;
+  int32 abrasion = 9;
+  int32 lv = 10;
+  int64 power = 11;
+  int64 hp = 12;
+  int64 ad = 13;
+  int64 ap = 14;
+  int64 addef = 15;
+  int64 apdef = 16;
+  string intro = 17;
+  int32 state = 18;
+  // 创建时间
+  string createTime = 19;
+}
+

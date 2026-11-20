@@ -1,0 +1,36 @@
+syntax = "proto3";
+package protocol.consumer;
+import "heroProto.proto";
+import "elvesProto.proto";
+
+// {classComment}
+message ConsumerProto {
+  int64 id = 1;
+  // 帐号
+  string account = 2;
+  // 钱包地址
+  string address = 3;
+  // 邮箱地址
+  string email = 4;
+  // 密码
+  string password = 5;
+  // 公会 ID
+  int32 guildId = 6;
+  // 加入公会时间
+  string joinGuiTime = 7;
+  // 城邦 ID
+  int32 cityId = 8;
+  // 状态 0有效 1失效
+  int32 state = 9;
+  // 注册时间
+  string registerTime = 10;
+  // 上次登录IP
+  string lastLoginIp = 11;
+  // 上次离线时间
+  string lastlogoutTime = 12;
+  // 英雄集合
+  repeated protocol.hero.HeroProto heroProtoList = 13;
+  // 精靈集合
+  repeated protocol.elves.ElvesProto elvesProtoList = 14;
+}
+

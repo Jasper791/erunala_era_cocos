@@ -1,0 +1,22 @@
+syntax = "proto3";
+package protocol.prop;
+
+// {classComment}
+message PropProto {
+  int32 propId = 1;
+  string propName = 2;
+  string userAddress = 3;
+  int32 card = 4;
+  int32 ticket = 5;
+  int32 iron = 6;
+  int32 stone = 7;
+  int32 timber = 8;
+  int32 water = 9;
+  int32 food = 10;
+  int64 amount = 11;
+  int32 hp = 12;
+  int32 power = 13;
+  int32 exp = 14;
+  string token_uri = 15;
+}
+

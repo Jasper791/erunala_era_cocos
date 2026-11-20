@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <link rel="icon" href="./favicon.ico" />
+        <meta charset="utf-8" />
+        <title><%=title%></title>
+        <meta
+            name="viewport"
+            content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1,minimal-ui=true"
+        />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="full-screen" content="yes" />
+        <meta name="screen-orientation" content="portrait" />
+        <meta name="x5-fullscreen" content="true" />
+        <meta name="360-fullscreen" content="true" />
+        <meta name="renderer" content="webkit" />
+        <meta name="force-rendering" content="webkit" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+        <link rel="stylesheet" type="text/css" href="./index.css" />
+    </head>
+    <body style="overflow: hidden;">
+        <%- include(cocosToolBar, {config: config}) %>
+        <div id="content" class="content" style="overflow: hidden;">
+            <div class="contentWrap">
+                <div id="GameDiv" class="wrapper">
+                    <div id="Cocos3dGameContainer">
+                        <canvas id="GameCanvas" tabindex="-1" style="background-color: '';"></canvas>
+                    </div>
+                    <div id="splash">
+                        <div class="progress-bar stripes"><span></span></div>
+                    </div>
+                    <div id="bulletin">
+                        <div id="sceneIsEmpty" class="inner"><%=tip_sceneIsEmpty%></div>
+                    </div>
+                    <div class="error" id="error">
+                        <div class="title">Error <i>(Please open the console to see detailed errors)</i></div>
+                        <div class="error-main"></div>
+                        <div class="error-stack"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+        // 预览页错误过滤（仅影响编辑器预览，不影响构建产物）
+        // 资源加载失败（img/audio/script 等）抛出的是普通 Event 而非 JS 异常，
+        // 多由浏览器插件注入的 DOM 引起；直接忽略，避免控制台刷屏和错误遮罩。
+        // 真正的 JS 异常 / 未处理的 Promise 拒绝仍交给引擎的预览诊断处理。
+        (function () {
+            var _origAdd = window.addEventListener.bind(window);
+            window.addEventListener = function (type, listener, options) {
+                if (type !== 'error' && type !== 'unhandledrejection') {
+                    return _origAdd(type, listener, options);
+                }
+                var wrapped = function (e) {
+                    if (type === 'error' && e && !(e instanceof ErrorEvent)) {
+                        return true;
+                    }
+                    if (typeof listener === 'function') {
+                        return listener.call(this, e);
+                    }
+                    return listener && listener.handleEvent ? listener.handleEvent(e) : undefined;
+                };
+                return _origAdd(type, wrapped, options);
+            };
+        })();
+        </script>
+        <%- include(cocosTemplate, {}) %>
+    </body>
+</html>

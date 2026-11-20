@@ -1,0 +1,39 @@
+{
+  "userData": {
+    "lv": 1,
+    "name": "用户12138",
+    "gold": 35261,
+    "diamond": 7300,
+    "soul": 60998719894,
+    "equipments": [],
+    "characters": [
+      {
+        "id": "002",
+        "lv": 1,
+        "star": 2,
+        "equipments": []
+      }
+    ],
+    "characterQueue": [
+      {
+        "id": "001",
+        "lv": 98,
+        "star": 4,
+        "equipments": [],
+        "uuid": 3,
+        "row": 2,
+        "clo": 1,
+        "direction": "left"
+      }
+    ],
+    "challengeTime": {
+      "goldMap": 1
+    }
+  },
+  "volume": 0.1,
+  "volumeDetail": {
+    "fight": 1,
+    "home": 1,
+    "character": 1
+  }
+}

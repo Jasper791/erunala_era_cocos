@@ -1,0 +1,21 @@
+syntax = "proto3";
+package protocol.request;
+
+// {classComment}
+message RequestProto {
+  // id
+  int64 id = 1;
+  // 回話token
+  string token = 2;
+  // 錢包地址
+  string address = 3;
+  // 業務數據
+  string Data = 4;
+  // 
+  int32 pageNum = 5;
+  // 
+  int32 pageSize = 6;
+  // 业务方法
+  int32 method = 7;
+}
+

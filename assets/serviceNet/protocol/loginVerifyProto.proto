@@ -1,0 +1,15 @@
+syntax = "proto3";
+package protocol.loginVerify;
+
+// 
+message LoginVerifyProto {
+  // 用户登录token
+  string token = 1;
+  // 登录账号
+  string account = 2;
+  // 钱包地址
+  string address = 3;
+  // 登录密码
+  string password = 4;
+}
+

@@ -1,0 +1,48 @@
+syntax = "proto3";
+package protocol.hero;
+
+// {classComment}
+message HeroProto {
+  // ID
+  int64 id = 1;
+  // 英雄id
+  int64 heroId = 2;
+  // 用户钱包地址
+  string userAddress = 3;
+  // 是否激活 0活动中 1非活动
+  int32 action = 4;
+  // 昵称
+  string nickName = 5;
+  // 职业 0平民 1刺客 2战士 3法师 4射手
+  int32 vocation = 6;
+  int32 sex = 7;
+  // 等级
+  int32 lv = 8;
+  // 经验值
+  int64 exp = 9;
+  // 力量值
+  int64 power = 10;
+  int64 tmpPower = 11;
+  // 生命值
+  int64 hp = 12;
+  int64 tmpHp = 13;
+  // 物理输出
+  int64 ad = 14;
+  // 法术输出
+  int64 ap = 15;
+  // 物理防御
+  int64 addef = 16;
+  // 魔法防御
+  int64 apdef = 17;
+  // 躲闪避开
+  int32 dodeg = 18;
+  // 穿透攻击率
+  int32 pierce = 19;
+  // 暴击率
+  int32 critical = 20;
+  // 状态 0有效 1失效
+  int32 state = 21;
+  // 创建时间
+  string createTime = 22;
+}
+

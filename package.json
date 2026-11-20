@@ -1,0 +1,14 @@
+{
+  "name": "erunala_era_cocos",
+  "uuid": "41a1ed0d-2a79-44cf-94fa-d7f42a318e57",
+  "creator": {
+    "version": "3.8.4"
+  },
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "web3": "^1.10.0",
+    "ws": "^8.22.1"
+  }
+}

@@ -1,0 +1,16 @@
+syntax = "proto3";
+package protocol.propPage;
+import "propProto.proto";
+
+// {classComment}
+message PropPageProto {
+  // 总记录数
+  int64 total = 1;
+  // 頁面顯示數量
+  int64 size = 2;
+  // 當前分頁
+  int64 current = 3;
+  // 道具分頁列表
+  repeated protocol.prop.PropProto propProtoList = 4;
+}
+

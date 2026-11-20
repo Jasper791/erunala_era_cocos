@@ -1,0 +1,39 @@
+syntax = "proto3";
+package protocol.elves;
+
+// {classComment}
+message ElvesProto {
+  // ID
+  int64 id = 1;
+  // 精灵id
+  int64 elvesId = 2;
+  // 用户钱包地址
+  string userAddress = 3;
+  string name = 4;
+  string image = 5;
+  int32 attr = 6;
+  int32 elvesType = 7;
+  // 性别 0 未知 1 男  2女
+  int32 sex = 8;
+  int32 wear = 9;
+  int32 abrasion = 10;
+  int32 lv = 11;
+  int64 exp = 12;
+  int64 power = 13;
+  int64 tmpPower = 14;
+  int64 hp = 15;
+  int64 tmpHp = 16;
+  int64 ad = 17;
+  int64 ap = 18;
+  int64 addef = 19;
+  int64 apdef = 20;
+  int32 dodeg = 21;
+  int32 pierce = 22;
+  int32 critical = 23;
+  string intro = 24;
+  string prefabPath = 25;
+  int32 state = 26;
+  // 创建时间
+  string createTime = 27;
+}
+
